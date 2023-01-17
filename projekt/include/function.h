@@ -8,9 +8,17 @@
 
 using namespace std;
 extern int id;
-
+/**
+ * @brief Clear the screen.
+ */
 void cls();
 
+/**
+ * @brief Saves a vector of vehicles to a binary file.
+ * 
+ * @param fileName The name of the file to save the vehicles to.
+ * @param vehicles The vector of vehicles to save to the file.
+ */
 template <typename T>
 void saveVehiclesToFile(const string &fileName, const vector<T> &vehicles) {
     ofstream fd;
@@ -23,6 +31,12 @@ void saveVehiclesToFile(const string &fileName, const vector<T> &vehicles) {
     fd.close();
 }
 
+/**
+ * @brief Reads a vector of vehicles from a binary file.
+ *
+ * @param fileName The name of the file to read the vehicles from.
+ * @param vehicles The vector of vehicles to be read from the file.
+ */
 template <typename T>
 void readVehiclesFromFile(const string &fileName,vector<T> &vehicles){
     char type;
@@ -57,5 +71,10 @@ void readVehiclesFromFile(const string &fileName,vector<T> &vehicles){
         }
     }
 }
+/**
 
+@brief Add a new vehicle to the system
+@param type the type of vehicle to be added
+@return A pointer to the newly created vehicle object
+*/
 Vehicle* addVehicle(const string &type);

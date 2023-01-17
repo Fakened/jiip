@@ -20,17 +20,29 @@ Vehicle* addVehicle(const string &type)
     getline(cin >> ws, name);
     cout << "Enter the price: ";
     float price;
-    cin >> price;
+    while (!(cin >> price)) {
+            cout << "Enter a floating point number number" << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
     if (type == "car") {
         cout << "Enter the engine of the car: ";
         string engine;
         getline(cin >> ws, engine);
         cout << "Enter the horse power of the car: ";
         int horsePower;
-        cin >> horsePower;
+        while (!(cin >> horsePower)) {
+            cout << "Enter a whole number" << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
         cout << "Enter the year of production of the car: ";
         int yearOfProduction;
-        cin >> yearOfProduction;
+        while (!(cin >> yearOfProduction)) {
+            cout << "Enter a whole number" << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
         cout << "Enter the plate of the car: ";
         string plate;
         getline(cin >> ws, plate);
@@ -41,19 +53,34 @@ Vehicle* addVehicle(const string &type)
         getline(cin >> ws, type);
         cout << "Enter the size of the bike: ";
         int size;
-        cin >> size;
+        while (!(cin >> size)) {
+            cout << "Enter a whole number" << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
         cout << "Enter ID of the bike: ";
         int ID;
-        cin >> ID;
+        while (!(cin >> ID)) {
+            cout << "Enter a whole number" << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
         return new Bike(id, name, price, false, "-", "-", type, size, ID);
     } else if(type == "scooter") {
         cout << "Enter the range of the scooter: ";
         int range;
-        cin >> range;
+        while (!(cin >> range)) {
+            cout << "Enter a whole number" << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
         cout << "Enter the ID of the scooter: ";
         int ID;
-        cin >> ID;
-
+        while (!(cin >> ID)) {
+            cout << "Enter a whole number" << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
         return new Scooter(id, name, price, false, "-", "-", range, ID);
     } else if (type == "motorbike") {
         cout << "Enter the engine of the motorbike: ";
@@ -61,10 +88,18 @@ Vehicle* addVehicle(const string &type)
         getline(cin >> ws, engine);
         cout << "Enter the horse power of the motorbike: ";
         int horsePower;
-        cin >> horsePower;
+        while (!(cin >> horsePower)) {
+            cout << "Enter a whole number" << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
         cout << "Enter the year of production of the motorbike: ";
         int yearOfProduction;
-        cin >> yearOfProduction;
+        while (!(cin >> yearOfProduction)) {
+            cout << "Enter a whole number" << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
         cout << "Enter the plate of the motorbike: ";
         string plate;
         getline(cin >> ws, plate);
