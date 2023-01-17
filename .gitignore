@@ -1,0 +1,13 @@
+.vscode/
+*zip
+*txt
+*bat
+build/
+.vs/
+*vcxproj*
+*sln
+zipTest.py
+x64/
+
+!cmake.txt
+!CMakeLists.txt
